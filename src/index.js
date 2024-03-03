@@ -1,5 +1,6 @@
 import _ from 'lodash';
 import './styles.css';
+import womanDog from './assets/woman-dog.jpg';
 
 console.log("Test Pack Watched reverted");
 
@@ -12,6 +13,9 @@ function component() {
     //element.textContent = myName('Max');
 
     element.classList.add('hello');
+
+    const womanImg = document.getElementById('womanDog');
+    womanImg.src = womanDog;
   
     return element;
   }
