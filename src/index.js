@@ -1,11 +1,11 @@
-//import _ from 'lodash';
 import "./styles.css";
-//import womanDog from './assets/woman-dog.jpg';
 import { container } from "./container";
 import { homeComponent } from "./home";
 import { menuComponent } from "./menu";
 import { aboutComponent } from "./about";
 import { contactComponent } from "./contact";
+//import _ from 'lodash';
+//import womanDog from './assets/woman-dog.jpg';
 
 const btnHome = document.querySelector("#homeBtn");
 const btnMenu = document.querySelector("#menuBtn");
