@@ -1,23 +1,37 @@
-import _ from 'lodash';
-import './styles.css';
-import womanDog from './assets/woman-dog.jpg';
+//import _ from 'lodash';
+import "./styles.css";
+//import womanDog from './assets/woman-dog.jpg';
+import { container } from "./container";
+import { homeComponent } from "./home";
+import { menuComponent } from "./menu";
+import { aboutComponent } from "./about";
+import { contactComponent } from "./contact";
 
-console.log("Test Pack Watched reverted");
+const btnHome = document.querySelector("#homeBtn");
+const btnMenu = document.querySelector("#menuBtn");
+const btnAbout = document.querySelector("#aboutBtn");
+const btnContact = document.querySelector("#contactBtn");
 
-function component() {
-    const element = document.createElement('div');
-  
-    // Lodash, now imported by this script
-    element.innerHTML = _.join(['Hello', 'webpack'], ' ');
+(function () {
+  homeComponent();
+})();
 
-    //element.textContent = myName('Max');
+btnHome.addEventListener("click", () => {
+  container.textContent = "";
+  homeComponent();
+});
 
-    element.classList.add('hello');
+btnMenu.addEventListener("click", () => {
+  container.textContent = "";
+  menuComponent();
+});
 
-    const womanImg = document.getElementById('womanDog');
-    womanImg.src = womanDog;
-  
-    return element;
-  }
-  
-  document.body.appendChild(component());
+btnAbout.addEventListener("click", () => {
+  container.textContent = "";
+  aboutComponent();
+});
+
+btnContact.addEventListener("click", () => {
+  container.textContent = "";
+  contactComponent();
+});
